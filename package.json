@@ -1,0 +1,14 @@
+{
+  "name": "h-tree-construction",
+  "version": "1.0.0",
+  "description": "Changes:",
+  "main": "index.html",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Bradley Hanson",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^24.5.0"
+  }
+}
