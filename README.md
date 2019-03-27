@@ -1,5 +1,7 @@
 # H-Tree Construction
 
+![Picture of H-Tree](h-tree.png)
+
 https://en.wikipedia.org/wiki/H_tree
 
 Originally implemented for a [Pramp interview](https://www.pramp.com/invt/lY9Lxp2vVZidqxz6qAGo). The Pramp interview platform did not include a proper `drawLine()` function, so I implemented this along with tests to verify the correctness of my solution.
