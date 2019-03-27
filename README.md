@@ -4,6 +4,8 @@ https://en.wikipedia.org/wiki/H_tree
 
 Originally implemented for a [Pramp interview](https://www.pramp.com/invt/lY9Lxp2vVZidqxz6qAGo). The Pramp interview platform did not include a proper `drawLine()` function, so I implemented this along with tests to verify the correctness of my solution.
 
+View it here: https://bradhanson.github.io/h-tree-construction/
+
 My original solution as coded in the allocated 30~ minute interview turned out to be mostly correct, but had a couple <strike>errors</strike> opportunities for improvement:
 
 Opportunities for improvement:
