@@ -20,3 +20,8 @@ Here is the correct specification from Wikipedia:
 > An H tree can be constructed by starting with a line segment of arbitrary length, **drawing two shorter segments** at right angles to the first through its endpoints, and continuing in the same vein, reducing (dividing) the length of the line segments drawn at each stage by √2.
 
 I acknowledge that they could have simplified the problem for interview purposes.
+
+TODO:
+
+- Write tests (figure out how to mock `drawLine()`)
+- Refactor/cleanup code
