@@ -47,39 +47,44 @@ function drawLine(context, x1, y1, x2, y2) {
   context.stroke();
 }
 
-const canvas = document.getElementById('game');
-if (canvas.getContext) {
-  const context = canvas.getContext('2d');
+function main() {
+  const canvas = document.getElementById('game');
+  if (canvas.getContext) {
+    const context = canvas.getContext('2d');
 
-  context.canvas.width = 800;
-  context.canvas.height = 600;
+    context.canvas.width = 800;
+    context.canvas.height = 600;
 
-  // draw border
-  context.strokeRect(0, 0, context.canvas.width, context.canvas.height);
-
-  const decrementButton = document.getElementById('decrementButton');
-  const incrementButton = document.getElementById('incrementButton');
-  const depthView = document.getElementById('depthView');
-
-  decrementButton.addEventListener('click', function() {
-    if (depthView.innerHTML === '0') {
-      return;
-    }
-    depthView.innerHTML = Number(depthView.innerHTML) - 1;
-    context.clearRect(0, 0, canvas.width, canvas.height);
+    // draw border
     context.strokeRect(0, 0, context.canvas.width, context.canvas.height);
-    drawHTree(context, 0, 0, 350, depthView.innerHTML);
-  });
 
-  incrementButton.addEventListener('click', function() {
-    if (depthView.innerHTML === '7') {
-      return;
-    }
-    depthView.innerHTML = Number(depthView.innerHTML) + 1;
-    context.clearRect(0, 0, canvas.width, canvas.height);
-    context.strokeRect(0, 0, context.canvas.width, context.canvas.height);
-    drawHTree(context, 0, 0, 350, depthView.innerHTML);
-  });
+    const decrementButton = document.getElementById('decrementButton');
+    const incrementButton = document.getElementById('incrementButton');
+    const depthView = document.getElementById('depthView');
 
-  drawHTree(context, 0, 0, 350, depthView.innerHTML);
+    decrementButton.addEventListener('click', function() {
+      if (depthView.innerHTML === '0') {
+        return;
+      }
+      depthView.innerHTML = Number(depthView.innerHTML) - 1;
+      context.clearRect(0, 0, canvas.width, canvas.height);
+      context.strokeRect(0, 0, context.canvas.width, context.canvas.height);
+      drawHTree(context, 0, 0, 350, depthView.innerHTML);
+    });
+
+    incrementButton.addEventListener('click', function() {
+      if (depthView.innerHTML === '7') {
+        return;
+      }
+      depthView.innerHTML = Number(depthView.innerHTML) + 1;
+      context.clearRect(0, 0, canvas.width, canvas.height);
+      context.strokeRect(0, 0, context.canvas.width, context.canvas.height);
+      drawHTree(context, 0, 0, 350, depthView.innerHTML);
+    });
+
+    drawHTree(context, 0, 0, 350, depthView.innerHTML);
+  }
 }
+window.onload = main;
+
+module.exports = { drawHTree, drawLine };
